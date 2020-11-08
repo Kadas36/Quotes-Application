@@ -20,7 +20,7 @@ export class QuoteComponent implements OnInit {
   }
 
   dislikes: number = 0;
-  decrementNumber(){
+  decrementNumber(index){
     this.dislikes++;
   }
 

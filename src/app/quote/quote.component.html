@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Quotes</h1>
+    <h1 class="text-center">Quotes</h1>
     <hr>
     <div class="row">
       <div class="col-sm-6">
@@ -24,11 +24,15 @@
                 <div class="glyphicon glyphicon-thumbs-down" (click)='decrementNumber(i)'></div>
                 <p class="count">{{ dislikes }}</p>
               </div>
-              
+              <button>Delete</button> 
             </div>
             
           </div>  
         </ul>
+      </div>
+
+      <div class="col-sm-6">
+        <app-form></app-form>
       </div>
     </div>
   </div>

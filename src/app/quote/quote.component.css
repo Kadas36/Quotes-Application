@@ -11,3 +11,7 @@ ul{
 .glyph{
     display: inherit;
 }
+button{
+    border: none;
+    background-color: inherit;
+}
