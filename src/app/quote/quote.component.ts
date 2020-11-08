@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 import { Kquote } from './../kquote';
 
 @Component({
@@ -14,14 +15,14 @@ export class QuoteComponent implements OnInit {
     new Kquote('Necessity is the mother of invention', 'Kadas', 'Thomas'),
   ];
 
-  likes: number = 0;
-  incrementNumber(){
-    this.likes++;
+  dislikes = 0;
+  likes = 0;
+  decrementNumber(): any{
+    this.dislikes++;
   }
 
-  dislikes: number = 0;
-  decrementNumber(index){
-    this.dislikes++;
+  incrementNumber(): any{
+    this.likes++;
   }
 
   constructor() { }
