@@ -7,6 +7,4 @@ import { Kquote } from './kquote';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'kquotes';
-  
 }
