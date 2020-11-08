@@ -16,8 +16,15 @@
     
             <div class="quoteAction">
               <p>By {{ quote.name}}</p>
-              <div class="glyphicon glyphicon-thumbs-up"></div>
-              <div class="glyphicon glyphicon-thumbs-down"></div>
+              <div class="glyph">
+                <div class="glyphicon glyphicon-thumbs-up" (click)='incrementNumber(i)'></div>
+                <p class="count">{{ likes }}</p>
+              </div>
+              <div class="glyph">
+                <div class="glyphicon glyphicon-thumbs-down" (click)='decrementNumber(i)'></div>
+                <p class="count">{{ dislikes }}</p>
+              </div>
+              
             </div>
             
           </div>  
