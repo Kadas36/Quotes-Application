@@ -1,9 +1,25 @@
-<div>
-    <h1>My Goals</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div>
+    <h1>Quotes</h1>
     <hr>
     <ul>
-        <li *ngFor='let quote of quotes'>
-          {{quote.name}}
-        </li>
+      <div *ngFor='let quote of quotes; let i = index'>
+        <li>{{quote.citation}}</li>
+
+        <div class="quoteAction">
+          <p>By {{ quote.name}}</p>
+          <div class="glyphicon glyphicon-thumbs-up"></div>
+          <div class="glyphicon glyphicon-thumbs-down"></div>
+        </div>
+        
+      </div>  
     </ul>
-</div>
+  </div>
+</body>
+</html>
