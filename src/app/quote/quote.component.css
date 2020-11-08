@@ -5,7 +5,9 @@
     margin-top: 20px;
     color: aqua;
 }
-
 ul{
     list-style-type: none;
+}
+.glyph{
+    display: inherit;
 }
