@@ -13,26 +13,14 @@
         <ul>
           <div *ngFor='let quote of quotes; let i = index'>
             <li>{{quote.citation}}</li>
-    
-            <div class="quoteAction">
-              <p>By {{ quote.name}}</p>
-              <div class="glyph">
-                <div class="glyphicon glyphicon-thumbs-up" (click)='incrementNumber(i)'></div>
-                <p class="count">{{ likes }}</p>
-              </div>
-              <div class="glyph">
-                <div class="glyphicon glyphicon-thumbs-down" (click)='decrementNumber(i)'></div>
-                <p class="count">{{ dislikes }}</p>
-              </div>
-              <button>Delete</button> 
-            </div>
+            <app-details [quote]='quote'></app-details>
             
           </div>  
         </ul>
       </div>
 
       <div class="col-sm-6">
-        <app-form (addKquote)="addNewKquote($event)"></app-form>
+        <app-form></app-form>
       </div>
     </div>
   </div>

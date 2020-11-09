@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { from } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { Kquote } from './../kquote';
 
 @Component({
@@ -8,14 +7,14 @@ import { Kquote } from './../kquote';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  
-  newKquote = new Kquote('', '', '');
-  @Output () addKquote = new EventEmitter<Kquote>();
 
-  submitKquote(){
-    this.addKquote.emit(this.newKquote);
-  }
-  
+  // newKquote = new Kquote('', '', '');
+  // @Output () addKquote = new EventEmitter<Kquote>();
+
+  // submitKquote(){
+  //   this.addKquote.emit(this.newKquote);
+  // }
+
   constructor() { }
 
   ngOnInit(): void {

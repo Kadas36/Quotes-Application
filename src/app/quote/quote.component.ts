@@ -25,6 +25,7 @@ export class QuoteComponent implements OnInit {
     this.likes++;
   }
 
+
   constructor() { }
 
   ngOnInit(): void {
