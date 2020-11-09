@@ -15,7 +15,9 @@ export class QuoteComponent implements OnInit {
     new Kquote('Necessity is the mother of invention', 'Kadas', 'Thomas'),
   ];
 
-  
+  toggleDetails(index): any{
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
 
   constructor() { }
 
