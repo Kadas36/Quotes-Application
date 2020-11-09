@@ -12,12 +12,12 @@
       <div class="row">
         <div class="col-sm-6">
           <ul>
-            <div *ngFor='let quote of quotes; let i = index' class="quoteStr">
+            <div *ngFor='let quote of quotes; let i = index' class="quoteStr" #parent appHighlight>
               <hr>
               <li>{{ quote.citation }}</li>
               <p>~ {{ quote.author }}</p>
               <button (click)='toggleDetails(i)'>Details</button>
-              <app-details *ngIf='quote.showDetails' [quote]='quote' (deleteQ) = 'quotedel($event,i)'></app-details>
+              <app-details [hidden]='!quote.showDetails' [quote]='quote' (deleteQ) = 'quotedel($event,i)'></app-details>
             
              </div>  
           </ul>

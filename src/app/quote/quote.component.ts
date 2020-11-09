@@ -27,6 +27,7 @@ export class QuoteComponent implements OnInit {
 
   addNewKquote(quote): any{
     this.quotes.push(quote)
+
   }
 
   constructor() { }

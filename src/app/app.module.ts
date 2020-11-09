@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormComponent } from './form/form.component';
 import { DetailsComponent } from './details/details.component';
+import { HighlightDirective } from './highlight.directive';
+import { PeriodPipe } from './period.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { DetailsComponent } from './details/details.component';
     QuoteComponent,
     FormComponent,
     DetailsComponent,
+    HighlightDirective,
+    PeriodPipe,
   ],
   imports: [
     BrowserModule,

@@ -2,11 +2,12 @@
   <p>By {{ quote.name}}</p>
   <div class="glyph">
     <div class="glyphicon glyphicon-thumbs-up" (click)='incrementNumber()'></div>
-    <p class="count">{{ likes }}</p>
+    <p class="likes count">{{ likes }}</p>
   </div>
   <div class="glyph">
     <div class="glyphicon glyphicon-thumbs-down" (click)='decrementNumber()'></div>
-    <p class="count">{{ dislikes }}</p>
+    <p class="dislikes count">{{ dislikes }}</p>
   </div>
   <button (click)= 'deleteQuote(true)'>Delete</button> 
-  </div>
+  <div class="period">Date is : {{quote.dateCreated | period}}</div>
+</div>
