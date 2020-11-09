@@ -1,18 +1,4 @@
 ul{
     list-style-type: none;
 }
-.quoteAction{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-top: 20px;
-    color: aquamarine;
-}
 
-.glyph{
-    display: inherit;
-}
-button{
-    border: none;
-    background-color: inherit;
-}

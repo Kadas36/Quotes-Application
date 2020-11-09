@@ -9,6 +9,17 @@ import { Kquote } from './../kquote';
 export class DetailsComponent implements OnInit {
 
   @Input() quote: Kquote;
+
+  dislikes = 0;
+  likes = 0;
+  decrementNumber(): any{
+    this.dislikes++;
+  }
+
+  incrementNumber(): any{
+    this.likes++;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

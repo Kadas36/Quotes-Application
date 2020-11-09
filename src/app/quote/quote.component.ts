@@ -15,16 +15,7 @@ export class QuoteComponent implements OnInit {
     new Kquote('Necessity is the mother of invention', 'Kadas', 'Thomas'),
   ];
 
-  dislikes = 0;
-  likes = 0;
-  decrementNumber(): any{
-    this.dislikes++;
-  }
-
-  incrementNumber(): any{
-    this.likes++;
-  }
-
+  
 
   constructor() { }
 
