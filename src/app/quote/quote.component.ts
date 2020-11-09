@@ -10,9 +10,9 @@ import { Kquote } from './../kquote';
 export class QuoteComponent implements OnInit {
 
   quotes: Kquote[] = [
-    new Kquote('Keep up', 'Kadas', 'Thomas'),
-    new Kquote('Old is Gold', 'Kadas', 'Thomas'),
-    new Kquote('Necessity is the mother of invention', 'Kadas', 'Thomas'),
+    new Kquote('Be yourself; everyone else is already taken.', 'Oscar Wilde', 'Thomas'),
+    new Kquote('I have learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.', 'Maya Angelou', 'Thomas'),
+    new Kquote('Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that', 'Martin Luther King Jr', 'Thomas'),
   ];
 
   toggleDetails(index): any{

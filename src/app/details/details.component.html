@@ -1,11 +1,11 @@
 <div class="quoteAction">
   <p>By {{ quote.name}}</p>
   <div class="glyph">
-    <div class="glyphicon glyphicon-thumbs-up" (click)='incrementNumber(i)'></div>
+    <div class="glyphicon glyphicon-thumbs-up" (click)='incrementNumber()'></div>
     <p class="count">{{ likes }}</p>
   </div>
   <div class="glyph">
-    <div class="glyphicon glyphicon-thumbs-down" (click)='decrementNumber(i)'></div>
+    <div class="glyphicon glyphicon-thumbs-down" (click)='decrementNumber()'></div>
     <p class="count">{{ dislikes }}</p>
   </div>
   <button (click)= 'deleteQuote(true)'>Delete</button> 
