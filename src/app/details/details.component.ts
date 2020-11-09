@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Kquote } from './../kquote';
 
 @Component({
@@ -9,9 +9,13 @@ import { Kquote } from './../kquote';
 export class DetailsComponent implements OnInit {
 
   @Input() quote: Kquote;
-
+  @Output() deleteQ = new EventEmitter<boolean>();
   dislikes = 0;
   likes = 0;
+
+  deleteQuote(erase: boolean){
+    this.deleteQ.emit(erase);
+  }
   decrementNumber(): any{
     this.dislikes++;
   }
