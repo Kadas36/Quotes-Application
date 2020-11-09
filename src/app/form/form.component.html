@@ -1,21 +1,28 @@
 <div class="container-fluid">
     <h4 class="text-center">Add new Quote</h4>
   
-    <form>
+    <form #quoteForm = 'ngForm' (ngSubmit)='submitKquote()'>
         <div class="inputs quoteArea">
           <label for="citation">New Quote</label>
-          <textarea name="citation" id="citation" cols="30" rows="5" class="form-control" required></textarea>
+          <textarea name="citation" #citation='ngModel' id="citation" cols="30" rows="5" class="form-control" [(ngModel)]="newKquote.citation" required></textarea>
+          <div [hidden]="citation.valid || citation.pristine" class="alert alert-danger">
+            <p>Enter Quote</p>
+          </div>
           
         </div>
         <div class="inputs quoteAuthor">
           <label for="author">Author</label>
-          <input type="text" name="author" id="author" class="form-control" required>
-          
+          <input type="text" name="author" id="author" class="form-control" [(ngModel)]="newKquote.author" #author='ngModel' required>
+          <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+            <p>Enter Author's Name</p>
+          </div>
         </div>  
         <div class="inputs quoteSubmitor">
           <label for="name">Your Name</label>
-          <input type="text" name="name" id="name" class="form-control" required>
-          
+          <input type="text" name="name" id="name" class="form-control" [(ngModel)]="newKquote.name" #name='ngModel' required>
+        </div>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p>Enter Name</p>
         </div>
         <button type="submit" class="btn btn-primary">Add</button>
     </form>

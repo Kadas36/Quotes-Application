@@ -7,23 +7,25 @@
 <body>
   <div class="container">
     <h1 class="text-center">Quotes</h1>
-    <hr>
-    <div class="row">
-      <div class="col-sm-6">
-        <ul>
-          <div *ngFor='let quote of quotes; let i = index' class="quoteStr">
-            <hr>
-            <li>{{ quote.citation }}</li>
-            <p>~ {{ quote.author }}</p>
-            <button (click)='toggleDetails(i)'>Details</button>
-            <app-details *ngIf='quote.showDetails' [quote]='quote' (deleteQ) = 'quotedel($event,i)'></app-details>
+    <div class="quoteContainer">
+      <hr>
+      <div class="row">
+        <div class="col-sm-6">
+          <ul>
+            <div *ngFor='let quote of quotes; let i = index' class="quoteStr">
+              <hr>
+              <li>{{ quote.citation }}</li>
+              <p>~ {{ quote.author }}</p>
+              <button (click)='toggleDetails(i)'>Details</button>
+              <app-details *ngIf='quote.showDetails' [quote]='quote' (deleteQ) = 'quotedel($event,i)'></app-details>
             
-          </div>  
-        </ul>
-      </div>
+             </div>  
+          </ul>
+        </div>
 
-      <div class="col-sm-6">
-        <app-form></app-form>
+        <div class="col-sm-6">
+          <app-form (addKquote)="addNewKquote($event)"></app-form>
+        </div>
       </div>
     </div>
   </div>

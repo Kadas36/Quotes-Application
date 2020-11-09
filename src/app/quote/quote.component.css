@@ -6,3 +6,9 @@ ul{
    margin-top: 5px;
    font-style: italic;
 }
+body{
+    background-color: lightslategrey;
+}
+.quoteContainer{
+    background-color: #d3d3d3;
+}
