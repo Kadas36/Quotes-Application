@@ -7,14 +7,18 @@ import { MyService } from './services/myservice.service';
 })
 export class HighlightDirective {
 
-  constructor(private elem: ElementRef, private myService: MyService ){ const test = myService.push(elem); }
+  constructor(private elem: ElementRef, private myService: MyService ){
+    const test = myService.push(elem);
+  }
 
   private allelements = [];
   private filteredArray = [];
  
   @HostListener('click') onClicks(){
     this.allelements = this.myService.getElements();
-    this.getAllLikes().then(() => { this.getTheHighestLikes() })
+    this.getAllLikes().then(() => {
+      this.getTheHighestLikes();
+     })
   }
 
   private getAllLikes() {
